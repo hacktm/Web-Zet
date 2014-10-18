@@ -1,4 +1,8 @@
+.container{
+	position: relative;
+}
 .preview{
+	display: table;
 	z-index: 100;
 	width: 500px;
 	height: 180px;
@@ -10,10 +14,16 @@
 	        box-shadow: 0 5px 6px -6px black;
 }
 .z-input-center{
-	position: relative;
-	top:45%;
+	/*position: absolute;
+	/*top:45%;*/
+	/*margin:auto;
+	top: 0; left: 0; bottom: 0; right: 0;*/*/
     width: 170px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
     margin:auto;
+    
 }
 .z-input-preview{
     width: 170px;
@@ -32,25 +42,12 @@
 	width: 440px;
 	height: 500px;
 	position: absolute;
-	right: 20px;
-	top:70px;
+	right: 0px;
+	top:0px;
 	background: #262626;
-}
-.previewColorChange{
-	position: relative;
-	top:-21px;
-    background: #262626;
-    color:white;
-    float: left;
-    padding-left: 10px;
-    font-size: 12px;
-}
-.previewBackground{
-	border:none;
-	border-right:20px solid #fff;
-	width: 60px;
-	height: 100%;
-	padding-left: 3px;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 17px;
 }
 .inputs{
 	border:none;
@@ -68,9 +65,9 @@
     font-size: 12px;
     margin:5px;
     margin-left: 30px;
-    width: 192px;
+    width: 197px;
 }
-.colorsInput span{
+.colorLabel{
 	position: relative;
 	top:3px;
 }
@@ -97,4 +94,60 @@
 }
 .z-radio-container{
 	padding-left: 60px;
+}
+.sliderContainer{
+	width: 300px;
+	float: left;
+	margin:5px;
+}
+.sliderVal{
+	width: 20px;
+	float: right;
+}
+.ui-widget-header{
+	background: #262626 !important;
+}
+.slider{
+	width: 120px;
+	float: left;
+	position: relative;
+	top:8px;
+	margin-left: 15px;
+}
+.ui-slider .ui-slider-handle{
+	width: 13px;
+	height:13px;
+}
+.ui-slider-horizontal{
+	height: 5px;
+}
+.sliderText{
+	display: inline-block;
+	width: 115px;
+	padding-top: 4px;
+	float: left;
+}
+.borderSliders{
+	margin-left: 100px;
+}
+.cssPreview{
+padding-left: 5px;
+}
+.className{
+	color:#06ff09;
+}
+.breakets{
+	color:white;
+	padding-left: 5px;
+}
+.attribute{
+	color:#069BFF;
+}
+.twoDots{
+	color:white;
+	padding-left: 3px;
+}
+.attributeValue{
+	color:#A700C7;
+	padding-left: 3px;
 }

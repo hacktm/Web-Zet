@@ -1,9 +1,48 @@
 $( document ).ready(function() {
 
+	$( ".borderSlider" ).slider({
+       range: "max",
+       min:0,
+       max:25,
+       slide: function( event, ui ) {
+          $( ".borderSliderVal" ).val( ui.value );
+          $('.z-input-preview').css('border-width', ui.value+"px");
+          $('.cssBorderWidth').text(ui.value+"px"); 
+
+       }	
+    });
+
+	$( ".radiusSlider" ).slider({
+       range: "max",
+       min:0,
+       max:50,
+       slide: function( event, ui ) {
+          $( ".radiusSliderVal" ).val( ui.value );
+          $('.z-input-preview').css('border-radius', ui.value+"px");
+       }	
+    });
+
+    $( ".inputPadding" ).slider({
+       range: "max",
+       min:0,
+       max:25,
+       slide: function( event, ui ) {
+          $( ".inputPaddingVal" ).val( ui.value );
+          $('.z-input-preview').css('padding', ui.value+"px");
+       }	
+    });
+
+	$( document ).tooltip();
+
+
 	$('.radio-button').click(function(){
-		$(this).siblings().prop("checked", false);
+		$('.radio-button').prop("checked", false);
+		$(this).prop("checked", true);
+		$('.z-input-preview').css('border-style',$(this).val());
+		$('.cssBorderStyle').text($(this).val());  
+
 	});
-	
+
 	function rgb2hex(rgb) {
 	     if (  rgb.search("rgb") == -1 ) {
 	          return rgb;
@@ -16,6 +55,15 @@ $( document ).ready(function() {
 	     }
 	}
 	(function(){
+
+		$('.radio-button-active').prop("checked", true);
+
+		$('.previewBackground').css('border-color',function(){
+
+ 			return $('.preview').css('background');
+ 		});
+
+ 		$('.previewBackground').val(rgb2hex($('.preview').css('background-color')));
 
  		$('.InputBackground').css('border-color',function(){
 
@@ -30,7 +78,7 @@ $( document ).ready(function() {
 
  		$('.borderColor').val(rgb2hex($('.z-input-preview').css('border-color'))); 	
 
- 		$('.textColor').css('border-color',function(){
+ 		$('.textColor').css('color',function(){
  			return $('.z-input-preview').css('color');
  		});
 
@@ -57,7 +105,8 @@ $( document ).ready(function() {
             colorScheme:'dark',
             onChange:function(hsb,hex,rgb,el,bySetColor) {
                 $(el).css('border-color','#'+hex);
-                $('.z-input-preview').css('background','#'+hex);                
+                $('.z-input-preview').css('background','#'+hex);
+                $('.bgColor').text('#'+hex);               
                 if(!bySetColor) $(el).val("#"+hex);
             }
         }).keyup(function(){
@@ -70,7 +119,8 @@ $( document ).ready(function() {
             colorScheme:'dark',
             onChange:function(hsb,hex,rgb,el,bySetColor) {
                 $(el).css('border-color','#'+hex);
-                $('.z-input-preview').css('border-color','#'+hex);                
+                $('.z-input-preview').css('border-color','#'+hex);
+                $('.borderColor').text('#'+hex);                 
                 if(!bySetColor) $(el).val("#"+hex);
             }
         }).keyup(function(){
@@ -83,7 +133,8 @@ $( document ).ready(function() {
             colorScheme:'dark',
             onChange:function(hsb,hex,rgb,el,bySetColor) {
                 $(el).css('border-color','#'+hex);
-                $('.z-input-preview').css('color','#'+hex);                
+                $('.z-input-preview').css('color','#'+hex);  
+                $('.cssTextColor').text('#'+hex);                
                 if(!bySetColor) $(el).val("#"+hex);
             }
         }).keyup(function(){
