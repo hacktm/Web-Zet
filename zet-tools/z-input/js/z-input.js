@@ -1,5 +1,19 @@
 $( document ).ready(function() {
+	var a = Math.floor((Math.random() * 100) + 1);
+	var b = Math.floor((Math.random() * 100) + 1); 
+	var c = a+b;
 
+	var save = '{"css":{"backgroundColor":"#ffffff","borderColor":"#262626","color":"#262626","borderStyle":"solid","borderWidth":"1px","borderRadius":"0px","padding":"0px"}}';
+	var saveInfo =  jQuery.parseJSON( save );
+	// console.log(saveInfo.css.backgroundColor);
+
+	$('.saveData').click(function(){
+		if($('.captcha').val() == c){
+			
+		}else{
+			
+		}
+	})
 	$( ".borderSlider" ).slider({
        range: "max",
        min:0,
@@ -7,7 +21,9 @@ $( document ).ready(function() {
        slide: function( event, ui ) {
           $( ".borderSliderVal" ).val( ui.value );
           $('.z-input-preview').css('border-width', ui.value+"px");
-          $('.cssBorderWidth').text(ui.value+"px"); 
+          $('.cssBorderWidth').text(ui.value+"px");
+          saveInfo.css.borderWidth = ui.value+"px";
+          // console.log(save);
 
        }	
     });
@@ -19,6 +35,8 @@ $( document ).ready(function() {
        slide: function( event, ui ) {
           $( ".radiusSliderVal" ).val( ui.value );
           $('.z-input-preview').css('border-radius', ui.value+"px");
+          $('.cssBorderRadius').text(ui.value+"px"); 
+          saveInfo.css.borderRadius = ui.value+"px";
        }	
     });
 
@@ -29,6 +47,8 @@ $( document ).ready(function() {
        slide: function( event, ui ) {
           $( ".inputPaddingVal" ).val( ui.value );
           $('.z-input-preview').css('padding', ui.value+"px");
+          $('.cssBorderPadding').text(ui.value+"px"); 
+          saveInfo.css.padding = ui.value+"px";
        }	
     });
 
@@ -39,7 +59,8 @@ $( document ).ready(function() {
 		$('.radio-button').prop("checked", false);
 		$(this).prop("checked", true);
 		$('.z-input-preview').css('border-style',$(this).val());
-		$('.cssBorderStyle').text($(this).val());  
+		$('.cssBorderStyle').text($(this).val());
+		saveInfo.css.borderStyle =  $(this).val(); 
 
 	});
 
@@ -55,7 +76,8 @@ $( document ).ready(function() {
 	     }
 	}
 	(function(){
-
+		
+    	$('.captcha').attr('placeholder', a +'+'+b);
 		$('.radio-button-active').prop("checked", true);
 
 		$('.previewBackground').css('border-color',function(){
@@ -78,7 +100,7 @@ $( document ).ready(function() {
 
  		$('.borderColor').val(rgb2hex($('.z-input-preview').css('border-color'))); 	
 
- 		$('.textColor').css('color',function(){
+ 		$('.textColor').css('border-color',function(){
  			return $('.z-input-preview').css('color');
  		});
 
@@ -94,6 +116,7 @@ $( document ).ready(function() {
                 $(el).css('border-color','#'+hex);
                 $('.preview').css('background','#'+hex);                
                 if(!bySetColor) $(el).val("#"+hex);
+
             }
         }).keyup(function(){
             $(this).colpickSetColor(this.value);
@@ -108,6 +131,8 @@ $( document ).ready(function() {
                 $('.z-input-preview').css('background','#'+hex);
                 $('.bgColor').text('#'+hex);               
                 if(!bySetColor) $(el).val("#"+hex);
+                saveInfo.css.backgroundColor =  '#'+hex;
+                console.log(saveInfo);
             }
         }).keyup(function(){
             $(this).colpickSetColor(this.value);
@@ -122,6 +147,7 @@ $( document ).ready(function() {
                 $('.z-input-preview').css('border-color','#'+hex);
                 $('.borderColor').text('#'+hex);                 
                 if(!bySetColor) $(el).val("#"+hex);
+                saveInfo.css.borderColor = '#'+hex;
             }
         }).keyup(function(){
             $(this).colpickSetColor(this.value);
@@ -136,8 +162,10 @@ $( document ).ready(function() {
                 $('.z-input-preview').css('color','#'+hex);  
                 $('.cssTextColor').text('#'+hex);                
                 if(!bySetColor) $(el).val("#"+hex);
+                saveInfo.css.color = '#'+hex;
             }
         }).keyup(function(){
             $(this).colpickSetColor(this.value);
         });
+
 });

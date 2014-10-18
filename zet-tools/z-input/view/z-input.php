@@ -84,8 +84,9 @@
 				<div class="inputPadding slider"></div>
 				<input type="text" class="inputPaddingVal sliderVal"></input>
 			</div>
-		</div>	
-	</div>
+		</div>
+		<div class="clear"></div><div class="space"></div>
+		
 	<div class="code-preview">
 		<code>
 <pre class="cssPreview">
@@ -95,10 +96,17 @@
 	<span class="attribute">color</span><span class="twoDots">:</span><span class="attributeValue cssTextColor">#262626</span><span class="twoDots">;</span>
 	<span class="attribute">border-style</span><span class="twoDots">:</span><span class="attributeValue cssBorderStyle">solid</span><span class="twoDots">;</span>
 	<span class="attribute">border-width</span><span class="twoDots">:</span><span class="attributeValue cssBorderWidth">1px</span><span class="twoDots">;</span>
+	<span class="attribute">border-radius</span><span class="twoDots">:</span><span class="attributeValue cssBorderRadius">0px</span><span class="twoDots">;</span>
+	<span class="attribute">padding</span><span class="twoDots">:</span><span class="attributeValue cssBorderPadding">0px</span><span class="twoDots">;</span>
 <span class="breakets">}</span>
 </pre>
 		</code>
 	</div>
+	<div class="saveContainer">
+		<input class="captcha" type="text"></input>
+		<button class="saveData">Save</button>
+	</div>
+
 </div>
 <script type="text/javascript">
 	$('.preview').stick_in_parent();
