@@ -1,0 +1,35 @@
+.preview{
+	width: 500px;
+	height: 180px;
+	border: 1px solid #e1e1e1;
+	background: white;
+	margin-top:10px;
+	-webkit-box-shadow: 0 5px 6px -6px black;
+	   -moz-box-shadow: 0 5px 6px -6px black;
+	        box-shadow: 0 5px 6px -6px black;
+}
+.z-input-center{
+	position: relative;
+	top:45%;
+    width: 170px;
+    margin:auto;
+}
+.z-input-preview{
+    width: 170px;
+    margin:auto;
+}
+.controls{
+	width: 500px;
+	height: 400px;
+	margin-top: 10px;
+	border:1px solid #e1e1e1;
+	background: white;
+}
+.code-preview{
+	width: 440px;
+	height: 500px;
+	position: absolute;
+	right: 20px;
+	top:70px;
+	background: #262626;
+}
