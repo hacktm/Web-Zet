@@ -1,8 +1,9 @@
 .preview{
+	z-index: 100;
 	width: 500px;
 	height: 180px;
 	border: 1px solid #e1e1e1;
-	background: white;
+	background: #fff;
 	margin-top:10px;
 	-webkit-box-shadow: 0 5px 6px -6px black;
 	   -moz-box-shadow: 0 5px 6px -6px black;
@@ -17,6 +18,8 @@
 .z-input-preview{
     width: 170px;
     margin:auto;
+    border-color:#262626;
+    color:#262626;
 }
 .controls{
 	width: 500px;
@@ -32,4 +35,66 @@
 	right: 20px;
 	top:70px;
 	background: #262626;
+}
+.previewColorChange{
+	position: relative;
+	top:-21px;
+    background: #262626;
+    color:white;
+    float: left;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.previewBackground{
+	border:none;
+	border-right:20px solid #fff;
+	width: 60px;
+	height: 100%;
+	padding-left: 3px;
+}
+.inputs{
+	border:none;
+	border-right:18px solid #fff;
+	width: 60px;
+	height: 100%;
+	padding-left: 3px;
+	float: right;
+}
+.colorsInput{
+	background: #262626;
+    color:white;
+    float: left;
+    padding-left: 10px;
+    font-size: 12px;
+    margin:5px;
+    margin-left: 30px;
+    width: 192px;
+}
+.colorsInput span{
+	position: relative;
+	top:3px;
+}
+.z-colors{
+	width: 100%;
+}
+.titleHead{
+	width: 100%;
+	padding: 5px 0 5px 0;
+	background: #262626;
+	color:white;
+	margin-bottom: 10px;
+}
+.clear{
+	clear:both;
+}
+.space{
+	margin-top:10px;
+}
+.z-radio{
+	width: 130px;
+	float: left;
+	padding: 5px;
+}
+.z-radio-container{
+	padding-left: 60px;
 }
