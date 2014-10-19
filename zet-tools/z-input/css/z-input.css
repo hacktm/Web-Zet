@@ -65,6 +65,22 @@
    -moz-box-shadow: 0 5px 6px -6px black;
         box-shadow: 0 5px 6px -6px black;
 }
+.code-preview-3{
+	/*-webkit-transition: all 2s;*/
+ /*   -moz-transition: all 2s;*//*
+    -o-transition: all 2s;
+    transition: all 2s;*/
+	width: 432px;
+	height: 170px;
+	margin: auto;
+	background: #262626;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 17px;
+	-webkit-box-shadow: 0 5px 6px -6px black;
+   -moz-box-shadow: 0 5px 6px -6px black;
+        box-shadow: 0 5px 6px -6px black;
+}
 .saved{
 	width: 300px;
 	border:1px solid #e1e1e1;

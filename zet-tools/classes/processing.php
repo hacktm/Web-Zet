@@ -35,6 +35,26 @@ class processing{
 		
 		}
 	}
+	public function z_input_get_random($rows){
+		$rows = $this->secure($rows);
+		$rowArray = array();
+		$sql = "SELECT * FROM `z-input` ORDER BY RAND() LIMIT ".$rows;
+		$res = $this->DB->query($sql);
+		if($res === false) {
+			trigger_error('Wrong SQL: ' . $sql . ' Error: ' . $this->DB->error, E_USER_ERROR);
+			return false;
+		} else {
+			if ($res->num_rows != 0) {
+				
+				while($row = $res->fetch_assoc()){
+					$rowArray[] = $row;
+				}
+				return $rowArray;
+			}else{
+				return false;
+			}
+		}
+	}
 		
 	private function secure($x){
 		$x = trim(strip_tags($this->DB->real_escape_string($x)));
