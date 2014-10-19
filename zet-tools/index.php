@@ -16,5 +16,8 @@
 		require 'z-input/view/z-input-id.php';
 	}elseif($page == 'z-input-random'){
 		require 'z-input/view/z-input-random.php';
+	}else{
+		require 'view/home.php';
 	}
+	require 'view/footer.php';
  ?>

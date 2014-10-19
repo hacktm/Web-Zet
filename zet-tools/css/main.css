@@ -24,13 +24,13 @@ body{
 }
 .zet-title a{
 	text-decoration: none;
-	color:#262626;
+	color:#563d7c;
 }
 
 .pimp-nav{
 	margin:0px;
 	padding:0px;
-	width: 360px !important;
+	width: 300px !important;
 	float:right;
 	/*border-bottom: 1px solid rgba(0, 0, 0, 0.24);*/
 	background: white;
@@ -52,7 +52,7 @@ body{
 	-o-transition: all 0.5s; 
 	display: inline-block;
 	text-decoration: none;
-	color:#777;
+	color:#563d7c;
 	padding: 20px;
 	margin-right: -4px;
 }
@@ -67,6 +67,7 @@ body{
 }
 
 .led-container{
+	position: relative;
 	width: 100%;
 }
 .led{
@@ -75,7 +76,74 @@ body{
 	-moz-transition: all 0.5s; 
 	-webkit-transition: all 0.5s; 
 	-o-transition: all 0.5s; 
-	position: relative;
+	position: absolute;
+	top:1px;
 	height: 2px;
 	background: #262626;
+}
+.fullWidthBanner{
+	width: 100%;
+	height: 300px;
+	background: url('../img/banner.jpg');
+	background-size: cover;
+	background-position: center; 
+	opacity: 0.7;
+	/*background-color: #6f5499;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+	background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+	background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
+	background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+	*/
+}
+.bannerText{
+	display: inline;
+	color:white;
+	font-size: 30px;
+	background: rgba(0,0,0,0.8);
+	padding: 30px;
+	position: relative;
+	top:200px;
+	border:1px outset rgba(255,255,255,0.3);
+	border-left: none;
+}
+.smallBox{
+	width: 450px;
+	height: 150px;
+	background: white;
+	float: left;
+	margin-left: 26px;
+	border:1px solid #e1e1e1;
+	margin-top: 30px;
+	overflow: hidden;
+
+}
+.homeTitle{
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+
+	background: rgba(0,0,0,0.8);
+	color:white;
+	position: relative;
+	top:150px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; 
+	-webkit-transition: all 0.5s; 
+	-o-transition: all 0.5s; 
+}
+.smallBox:hover  .homeTitle{
+	top:95px;
+}
+.i1{
+	background: url('../img/input.png');
+}
+.i2{
+	background: url('../img/nav.png');
+}
+.image{
+	width: 100%;
+	height: 150px;
+	background-size: cover;
+	background-position: center;
 }
