@@ -15,7 +15,7 @@ $( document ).ready(function() {
       type: 'post',
       async: false,
       success: function(data){
-        console.log(data);
+        location.href =  location.pathname+'?page=z-input-id&id='+data+'&saved';
         
         
       }
