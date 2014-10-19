@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-	var a = Math.floor((Math.random() * 100) + 1);
-	var b = Math.floor((Math.random() * 100) + 1); 
+	var a = Math.floor((Math.random() * 10) + 1);
+	var b = Math.floor((Math.random() * 10) + 1); 
 	var c = a+b;
 
 	var save = '{"css":{"backgroundColor":"#ffffff","borderColor":"#262626","color":"#262626","borderStyle":"solid","borderWidth":"1px","borderRadius":"0px","padding":"0px"}}';
@@ -9,9 +9,20 @@ $( document ).ready(function() {
 
 	$('.saveData').click(function(){
 		if($('.captcha').val() == c){
-			
+			$.ajax({
+      url:  "src/z-input.php",
+      data: {saveInfo:saveInfo},
+      type: 'post',
+      async: false,
+      success: function(data){
+        console.log(data);
+        
+        
+      }
+      
+    });
 		}else{
-			
+			alert('no no no')
 		}
 	})
 	$( ".borderSlider" ).slider({
