@@ -103,7 +103,7 @@
 		</code>
 	</div>
 	<div class="saveContainer">
-		<input class="captcha" type="text"></input>
+		<input class="captcha" style="width:50px;" type="text"></input>
 		<button class="saveData">Save</button>
 	</div>
 
